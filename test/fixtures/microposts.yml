@@ -1,0 +1,50 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+bread:
+  content: "I just ate a bread"
+  created_at: <%= 10.minutes.ago %>
+  user: luis
+
+batman:
+  content: "Don't see bard"
+  created_at: <%= 3.years.ago %>
+  user: luis
+
+australian:
+  content: "Australian, wasn't he?"
+  created_at: <%= 2.years.ago %>
+  user: luis
+
+most_recent:
+  content: "Writing a short test"
+  created_at: <%= Time.zone.now %>s
+  user: luis
+
+ants:
+  content: "Oh, is that what you want? Because that's how you get ants!"
+  created_at: <%= 2.years.ago %>
+  user: joao
+
+zone:
+  content: "Danger zone!"
+  created_at: <%= 10.minutes.ago %>
+  user: joao
+
+tone:
+  content: "I'm sorry. Your words made sense, but your sarcastic tone did not."
+  created_at: <%= 10.minutes.ago %>
+  user: natalia
+
+van:
+  content: "Dude, this van's, like, rolling probable cause."
+  created_at: <%= 4.hours.ago %>
+  user: natalia
+
+<% 30.times do |n| %>
+micropost_<%= n %>:
+  content: <%= Faker::Lorem.sentence(5) %>
+  created_at: <%= 42.days.ago %>
+  user: luis
+<% end %>
+
+

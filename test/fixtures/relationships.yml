@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  follower: luis
+  followed: natalia
+
+two:
+  follower: luis
+  followed: geralt
+
+three:
+  follower: natalia
+  followed: luis
+
+four:
+  follower: geralt
+  followed: luis

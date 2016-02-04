@@ -75,4 +75,33 @@ foo@bar_baz.com foo@bar+baz.com]
       @user.destroy
     end
   end
+
+  test "should follow and unfollow a user" do
+    luis = users(:luis)
+    joao = users(:joao)
+    assert_not luis.following?(joao)
+    luis.follow(joao)
+    assert luis.following?(joao)
+    assert joao.followers.include?(luis)
+    luis.unfollow(joao)
+    assert_not luis.following?(joao)
+  end
+
+  test "feed should have the right posts" do
+    luis = users(:luis)
+    joao = users(:joao)
+    natalia = users(:natalia)
+    # Posts from followed user
+    natalia.microposts.each do |post_following|
+      assert luis.feed.include?(post_following)
+    end
+    # Posts from self
+    luis.microposts.each do |post_self|
+      assert luis.feed.include?(post_self)
+    end
+    # Posts from unfollowed user
+    joao.microposts.each do |post_unfollowed|
+      assert_not luis.feed.include?(post_unfollowed)
+    end
+  end
 end

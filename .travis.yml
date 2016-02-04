@@ -1,9 +1,10 @@
 language: ruby
 rvm:
-  - 2.2.1
-  #- 1.9.3
-  #- jruby-18mode # JRuby in 1.8 mode
-  #- jruby-19mode # JRuby in 1.9 mode
-  #- rbx-2.1.1
-  #- 1.8.7
-  #- ree
+- 2.2.1
+deploy:
+  provider: heroku
+  api_key:
+    secure: JbJE3QsJ3mRUUdYvMfrfVDfjRWcetiR74DMUu3TUPJ72f6PSOrhCpc4ybdFy5NwXTe4q906klXsKTX1Qh9pAFAGTKzOX+j3423Hp1drA3Ia4f43LjwbqBiPUK5tH1+or5fxM1MTLrbs0pU8/kCVDobdCV/PuxQK3RDq2HLmiSDjwvrVMthIY7vT71l9hC5YBvY6Lo6WvvscM0XWXYXWBIiHHR/9GHulaYL4+3xr5jmh4HD68TGuTfFPFdZu/qo/8WmmYYU766LhrvWO1crDaAbh1Sr3yr7/THV3p1dHu270s+/++ruZv91qKhLxUQmPZQhprixtBfDQPJk9VWF6C6DgQHzn75qyldNjkExAEs8fEMq7wblEWfkVN46TzDaAzOw1g3HMyiR7bc2uWH37qQ/hbuIRrCbksw7OVpitufFkiAqhNA8jBhNYtZEjHlODyWuSHTYK/sWQQTaRUTyRRb0UpOkES9b1Exys6H/LNvTmKwUj2ZxsxEG6CTQF6K9pbEK8TNRZv8xx+NmMnsnxFpSZjFJqxrTWSiL6TE0IL/zW+d2f8qy5fmkNshPigqe7sxQWmN/wW0SgEWnNBHEkXzLiH8oHBwf22+3mHd2ghbOiG33RqlOCHTXFFNRRKGDJX9grg3ZHoTj0H9Ca2pJMgWPEzS6tdtjrJtr2ipmlzw28=
+  app: peaceful-retreat-3557
+  on:
+    repo: lfnascimento/sample_app_2
